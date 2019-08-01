@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+.root {
+    margin: 0;
+    font-family: Arial;
+}
+
 .landing {
   background-color: red;
   min-height: 100vh;
@@ -41,8 +50,73 @@
   background-color: rgb(43, 76, 226);
 }
 
-.welcome {
+
+
+
+.welcomeHeader {
   background-color: #282c34;
+  display: flex;
+  flex-flow: column wrap;
+  color: white;
+  text-align: center;
+}
+
+.cdc {
+  background-color: #282c34;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.welcome {
+  display: flex;
+  background-color: #282c34;
+  flex-flow: column wrap;
+}
+
+.img {
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 10px;
+}
+
+.titles {
+  text-align: center;
+  margin-top: auto;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  background-color: #282c34;
+  padding: 15px;
+  align-items: center;
+}
+
+
+
+
+
+
+.zero, .one, .two, .three, .four, .five {
+  background: tomato;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+
+.userLanding {
+  background-color: rgb(145, 255, 0);
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -54,15 +128,16 @@
   color: white;
 }
 
-.zero, .one, .two, .three, .four, .five {
-  background: tomato;
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  line-height: 100px;
+.userWelcome {
+  background-color: rgb(255, 217, 0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: center;*/
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
   color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
 }
+

@@ -1,6 +1,6 @@
 
 export const addPartyName = addPartyName => ({
-  type: 'partyName',
+  type: 'addPartyName',
   payload: {
     addPartyName,
   },
