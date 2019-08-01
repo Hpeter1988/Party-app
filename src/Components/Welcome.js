@@ -2,13 +2,23 @@ import React from 'react';
 
 
 const Welcome = () => (
-  <div className="welcome">
-    <div className="zero" />
-    <div className="one" />
-    <div className="two" />
-    <div className="three" />
-    <div className="four" />
-    <div className="five" />
+  <div>
+    <div className="welcomeHeader">
+      <h1>Welcome to Party Rater!</h1>
+      <p>You will get ratings about</p>
+    </div>
+    <div className="welcome">
+      <div className="img"><img src="https://via.placeholder.com/100x100" alt="Pic comes here" /></div>
+      <h4 className="titles">the WIBE</h4>
+    </div>
+    <div className="welcome">
+      <div className="img"><img src="https://via.placeholder.com/100x100" alt="Pic comes here" /></div>
+      <h4 className="titles">the CROWD</h4>
+    </div>
+    <div className="welcome">
+      <div className="img"><img src="https://via.placeholder.com/100x100" alt="Pic comes here" /></div>
+      <h4 className="titles">and the MUSIC</h4>
+    </div>
   </div>
 );
 
