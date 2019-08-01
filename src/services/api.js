@@ -1,4 +1,3 @@
-export const HelloWorldApi = () => ({ name: 'Hello World' });
+import axios from 'axios';
 
-export const StarWarsApi = () => fetch('https://swapi.co/api/people/1/')
-  .then(res => res.json());
+export const Welcome = () => ({ name: 'Welcome' });

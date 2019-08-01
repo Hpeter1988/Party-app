@@ -1,33 +1,68 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+.landing {
+  background-color: red;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /*justify-content: center;*/
+  flex-flow: row wrap;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nameForm {
+  background-color: blueviolet;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#name {
+  background-color: rgb(226, 43, 165);
+  padding: 5px;
+  width: 50px;
+  height: 100px;
+  margin: 5px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.nameButton {
+  background-color: rgb(43, 76, 226);
+}
+
+.welcome {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: center;*/
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.zero, .one, .two, .three, .four, .five {
+  background: tomato;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
 }
