@@ -1,16 +1,23 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import HelloWorldRedux from '../Containers/HelloWorldRedux/HelloWorldRedux';
-import HelloWorldSaga from '../Containers/HelloWorldSaga/HelloWorldSaga';
-import HelloWorldSimple from './HelloWorldSimple/HelloWorldSimple';
+import {
+  BrowserRouter as Router, Route, Switch,
+} from 'react-router-dom';
 import '../stylesheets/App.css';
+import Landing from '../Containers/Landing';
+import Welcome from './Welcome';
+import Test from './test';
+
 
 const App = () => (
-  <Switch>
-    <Route exact path="/" component={HelloWorldRedux} />
-    <Route exact path="/simple" component={HelloWorldSimple} />
-    <Route exact path="/saga" component={HelloWorldSaga} />
-  </Switch>
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/landing" component={Landing} />
+        <Route exact path="/welcome" component={Welcome} />
+        <Route exact path="/test" component={Test} />
+      </Switch>
+    </div>
+  </Router>
 );
 
 export default App;

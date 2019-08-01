@@ -1,7 +1,10 @@
-export const getHelloWorld = () => ({
-  type: 'HELLO_WORLD_REQUESTED',
+
+export const addPartyName = addPartyName => ({
+  type: 'partyName',
+  payload: {
+    addPartyName,
+  },
 });
 
-export const getHelloWorldSaga = () => ({
-  type: 'HELLO_WORLD_SAGA_REQUESTED',
-});
+export const addPartyNameSuccess = () => ({ type: 'PARTY_NAME_SUCCESS', payload: '' });
+export const addPartyNameFailed = () => ({ type: 'PARTY_NAME_FAILED', payload: '' });
