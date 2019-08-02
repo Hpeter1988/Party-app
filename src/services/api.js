@@ -9,3 +9,11 @@ export function fetchMyParty(payload) {
     data: payload,
   });
 }
+
+export function fetchCrateMyParty(payload) {
+  return axios({
+    method: 'post',
+    url: 'http://beparty-env.xcz6zp8zmr.us-east-1.elasticbeanstalk.com/createparty',
+    data: payload,
+  });
+}

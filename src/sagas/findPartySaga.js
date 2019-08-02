@@ -6,7 +6,7 @@ export function* findMyPartyWorkerSaga(action) {
   try {
     const response = yield call(fetchMyParty, action.payload);
     if (response.status === 200) {
-      console.log(response)
+      localStorage.setItem('PARTY', response.data);
       history.push('/myparty');
     }
   } catch (error) {
@@ -15,6 +15,5 @@ export function* findMyPartyWorkerSaga(action) {
 }
 
 export function* findMyPartyWatcherSaga() {
-  console.log('ok')
   yield takeEvery('findMyParty', findMyPartyWorkerSaga);
 }

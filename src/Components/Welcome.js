@@ -34,8 +34,5 @@ const Welcome = () => (
       </form>
     </div>
   </div>
-
-
 );
-
 export default Welcome;

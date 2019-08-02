@@ -53,7 +53,6 @@ class Return extends Component {
   render() {
     const { error } = this.state;
     const { backendError } = this.props;
-    console.log(backendError)
     return (
       <div className="settings">
         <form>

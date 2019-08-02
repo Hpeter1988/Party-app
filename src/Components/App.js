@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Route, Switch,
+  Router, Route, Switch,
 } from 'react-router-dom';
 import '../stylesheets/App.css';
 import Welcome from './Welcome';
@@ -9,9 +9,11 @@ import UserLanding from './UserLanding';
 import UserWelcome from './UserWelcome';
 import Return from './return';
 import navLanding from './landingPage';
+import { history } from '../store/configureStore';
+
 
 const App = () => (
-  <Router>
+  <Router history={history}>
     <div>
       <Switch>
         <Route exact path="/" component={navLanding} />

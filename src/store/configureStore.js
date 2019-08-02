@@ -1,3 +1,4 @@
+
 import 'babel-polyfill';
 import { createStore, compose, applyMiddleware } from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
@@ -6,7 +7,8 @@ import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/index';
 import rootSaga from '../sagas/rootSaga';
-import {findMyPartyWatcherSaga} from '../sagas/findPartySaga';
+import { findMyPartyWatcherSaga } from '../sagas/findPartySaga';
+
 export const history = createHistory();
 
 // PROD
@@ -58,4 +60,3 @@ function configureStoreDev(initialState) {
 const configureStore = process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev;
 
 export default configureStore;
-
