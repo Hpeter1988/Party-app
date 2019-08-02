@@ -5,7 +5,8 @@ import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/index';
-
+import rootSaga from '../sagas/rootSaga';
+import {findMyPartyWatcherSaga} from '../sagas/findPartySaga';
 export const history = createHistory();
 
 // PROD
@@ -21,6 +22,8 @@ function configureStoreProd(initialState) {
   const store = createStore(rootReducer, initialState, compose(
     applyMiddleware(...middlewares),
   ));
+
+  sagaMiddleware.run(findMyPartyWatcherSaga);
   return store;
 }
 
@@ -47,6 +50,7 @@ function configureStoreDev(initialState) {
     });
   }
 
+  sagaMiddleware.run(rootSaga);
 
   return store;
 }
@@ -54,3 +58,4 @@ function configureStoreDev(initialState) {
 const configureStore = process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev;
 
 export default configureStore;
+

@@ -1,9 +1,11 @@
-/*import axios from 'axios';
+import axios from 'axios';
 
-export function fetchLanding(payload) {
+const baseBackendAdress = '';
+// eslint-disable-next-line import/prefer-default-export
+export function fetchMyParty(payload) {
   return axios({
-    method: 'post',
-    url: 'http://localhost:3012/landing',
+    method: 'put',
+    url: 'http://beparty-env.xcz6zp8zmr.us-east-1.elasticbeanstalk.com/findmyparty',
     data: payload,
   });
-}*/
+}
